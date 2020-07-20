@@ -1,0 +1,25 @@
+<p>users works!</p>
+
+<ul *ngIf="show">
+    <li *ngFor="let user of users">{{ user }}</li>
+    
+  </ul>
+  
+  First name: <input 
+                (keyup)="inputYourName($event)"
+                (keyup.enter)="onEnter()"
+                />
+  {{ firstName }}
+  <br>
+  Last name: <input 
+                #lastname  
+                (keyup)="inputLastName(lastname.value)"
+                (keyup.enter)="onEnter()"
+                />
+  
+  {{ lastName }}
+  <br/>
+  <button (click)="onEnter()">Save</button>
+  
+  <br/>
+  Result = {{ name }}
